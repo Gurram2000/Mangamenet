@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive Sidebar Menu  | CodingLab </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script type="text/javascript" src="form.js"></script>
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus icon'></i>
+        <div class="logo_name">Student Management</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+  
+ 
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+          
+        </a>
+         <span class="tooltip">Dashboard</span>
+      </li>
+      
+    </ul>
+  </div>
+
+  
+
+  <section class="home-section">
+      <div class="text">Dashboard</div>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            
+            
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+           
+              <table>
+                  <tr>
+                      <td>
+                          <form action="display.html" autocomplete="off" onsubmit="onFormSubmit()">
+                              <div>
+                                  <label for="redgid">REDG ID</label >
+                                  <input type="number" name="redgid" id="redgid" required>
+                              </div>
+                              <div>
+                                  <label for="name">Name</label>
+                                  <input type="text" name="name" id="name" required>
+                              </div>
+                              <div>
+                                  <label for="department">Department</label>
+                                  <input type="text" name="department" id="department" required>
+                              </div>
+                              <div>
+                                  <label for="section">Section</label>
+                                  <input type="text" name="section" id="section" required>
+                              </div>
+          
+                              <div class="form_action--button">
+                                  <input type="submit" value="Submit">
+                                  <input type="reset" value="Reset">
+                              </div>
+                          </form>
+          
+                          <td>
+                              <table class="list" id="storeList">
+                                  <thead>
+                                      <tr>
+                                          <th>REDG ID</th>
+                                          <th>Name</th>
+                                          <th>DEPARTMENT</th>
+                                          <th>SECTION</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+          
+                                  </tbody>
+                              </table>
+                          </td>
+                      </td>
+                  </tr>
+              </table>
+            
+            
+          </div>
+        </div>
+      
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
