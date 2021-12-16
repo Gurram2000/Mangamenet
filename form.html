@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive Sidebar Menu  | CodingLab </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/ujEuHis7eWWA9bv3/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+    fetch("https://api.apispreadsheets.com/data/ujEuHis7eWWA9bv3/").then(res=>{
+	if (res.status === 200){
+		// SUCCESS
+		res.json().then(data=>{
+			const yourData = data
+		}).catch(err => console.log(err))
+	}
+	else{
+		// ERROR
+	}
+})
+	</script>
+   </head>
+
+
+
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus icon'></i>
+        <div class="logo_name">Student Management</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+  
+ 
+    <ul class="nav-list">
+      
+      <li>
+        <a href="form.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Enroll</span>
+          
+        </a>
+         <span class="tooltip">Enroll</span>
+      </li>
+      <li>
+        <a href="table.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">student list</span>
+          
+        </a>
+         <span class="tooltip">Student List</span>
+      </li>
+      
+    </ul>
+  </div>
+
+  <section class="home-section">
+      <div class="text">Dashboard</div>
+      <div class="row">
+        
+      
+        <div class="column">
+          <div class="card">
+           
+              <table>
+                  <tr>
+                      <td>
+                          <form id="myForm" >
+                              <div>
+                                  <label for="redgid">REDG ID</label >
+                                  <input type="number" name="redgid" id="redgid" required>
+                              </div>
+                              <div>
+                                  <label for="name">Name</label>
+                                  <input type="text" name="name" id="name" required>
+                              </div>
+                              <div>
+                                  <label for="department">Department</label>
+                                  <input type="text" name="department" id="department" required>
+                              </div>
+                              <div>
+                                  <label for="section">Section</label>
+                                  <input type="text" name="section" id="section" required>
+                              </div>
+          
+                              
+                              
+                          </form>
+                          <button onclick='SubForm()'>Submit</button>
+          
+                          
+                      </td>
+                  </tr>
+              </table>
+            
+            
+          </div>
+        </div> 
+        <!-- <form id="myForm">
+          <label>redgno</label>
+          <input name="redgno" />
+          <br/>
+          <label>name</label>
+          <input name="name" />
+          <br/>
+          <label>department</label>
+          <input name="department" />
+          <br/>
+          <label>section</label>
+          <input name="section" />
+          <br/>
+        </form>
+        <button onclick='SubForm()'>Submit</button> -->
+      
+  </section>
+
+  <script src="script.js"></script>
+  
+
+</body>
+</html>
